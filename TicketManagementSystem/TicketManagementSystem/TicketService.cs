@@ -6,7 +6,7 @@ using EmailService;
 
 namespace TicketManagementSystem
 {
-    public class TicketService
+    public class TicketService : ITicketService
     {
         public int CreateTicket(string t, Priority p, string assignedTo, string desc, DateTime d, bool isPayingCustomer)
         {
