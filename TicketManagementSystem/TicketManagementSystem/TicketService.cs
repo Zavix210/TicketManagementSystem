@@ -10,11 +10,9 @@ namespace TicketManagementSystem
     {
         public int CreateTicket(string t, Priority p, string assignedTo, string desc, DateTime d, bool isPayingCustomer)
         {
-            // Check if t or desc are null or if they are invalid and throw exception
-            if (t == null || desc == null || t == "" || desc == "")
-            {
+            // Check if t or desc are null or Empty and throw exception
+            if (string.IsNullOrEmpty(t) || string.IsNullOrEmpty(desc))
                 throw new InvalidTicketException("Title or description were null");
-            }
 
             User user = null;
             using (var ur = new UserRepository())

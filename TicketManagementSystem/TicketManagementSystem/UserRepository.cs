@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Data.SqlClient;
+using TicketManagementSystem.Interfaces;
 
 namespace TicketManagementSystem
 {
-    public class UserRepository : IDisposable
+    public class UserRepository : IDisposable, IUserRepository
     {
         public User GetUser(string username)
         {
