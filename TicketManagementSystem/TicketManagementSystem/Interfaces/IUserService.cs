@@ -4,6 +4,6 @@
     {
         User GetUser(string username);
 
-        User GetAccountManager(bool isPayingCustomer);
+        User GetAccountManager();
     }
 }

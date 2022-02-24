@@ -1,4 +1,5 @@
 ﻿using TicketManagementSystem.Interfaces;
+
 namespace TicketManagementSystem
 {
     public class UserService : IUserService
@@ -15,10 +16,9 @@ namespace TicketManagementSystem
             _userRepository = userRepository;
         }
 
-        public User GetAccountManager(bool isPayingCustomer)
+        public User GetAccountManager()
         {
-            // Only paid customers have an account manager.
-            return isPayingCustomer ? _userRepository.GetAccountManager() : null;
+            return _userRepository.GetAccountManager();
         }
 
         public User GetUser(string assignedTo)
